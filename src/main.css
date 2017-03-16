@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body, #app {
+  height: 100%;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: #000;
+  margin: 0;
+  font: 1.4rem/1.4 "Helvetica Neue","Helvetica","Lucida Grande","Arial","Hiragino Sans GB","Microsoft Yahei","WenQuanYi Micro Hei","sans-serif";
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main {
+  width: 40%;
+  margin: 0 auto;
+  padding-top: 2rem;
+
+}
+
+.entry {
+  text-align: center;
+}
+
+.entry h1 {
+  color: red;
+  font-size: 3rem;
+}
+
+.entry input {
+  outline: none;
+  border: 0;
+  font-size: 2rem;
+  padding: .5rem;
+  width: 80%;
+  border-radius: 3px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, .2);
+  color: #fff;
+}
+
+.dreambox {
+  color: #fff;
+  border: 2px dashed #ccc;
+  margin-top: 2rem;
+  position: relative;
+  padding-bottom: 4rem;
+}
+
+.dreambox ul {
+  height: 400px;
+  overflow-y: auto;
+}
+
+.dreambox input {
+  visibility: hidden;
+  position: relative;
+  height: 1.2rem;
+  width: 1.2rem;
+}
+
+.dreambox input::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0;
+  top: 0; bottom: 0;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  visibility: visible;
+}
+
+.dreambox input::before {
+  content: '';
+  position: absolute;
+  left: 4px; right: 4px;
+  top: 4px; bottom: 4px;
+  background-color: red;
+  border-radius: 50%;
+  visibility: hidden;
+}
+
+.dreambox li {
+  padding: 1rem 10%;
+  border-bottom: 1px dashed #ccc;
+}
+
+.x {
+  width: 1rem;
+  height: 1rem;
+  position: relative;
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+.x::before {
+  content: '';
+  position: absolute;
+  top: 50%; height: 1px;
+  left: 0; right: 0;
+  background-color: #fff;
+  transform: rotateZ(60deg);
+}
+
+.x::after {
+  content: '';
+  position: absolute;
+  left: 50%; width: 1px;
+  top: 0; bottom: 0;
+  background-color: #fff;
+  transform: rotateZ(30deg);
+}
+
+.finished {
+  background-color: #333;
+  color: #ccc;
+}
+
+.finished .x::before, .finished .x::after {
+  background-color: #ccc;
+}
+
+.finished input::before {
+  visibility: visible;
+}
+
+.statusbar {
+  position: absolute;
+  bottom: 0;
+  left: 0; right: 0;
+}
+
+.statusbar a {
+  color: #fff;
+}
+
+.statusbar a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+.dreambox .statusbar {
+  border: none;
+  padding: .5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+
+
+
